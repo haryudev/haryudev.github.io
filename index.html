@@ -1,390 +1,232 @@
+<!doctype html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link href = "C:\Users\leoba\Downloads\font\stylesheet.css" rel = "stylesheet" type = "text/css" />
+        <title>
+            Greater Porto LP
+        </title>
+    </head>
+
     <style>
-        td{display: block;
-        padding-right: 15px;
-        border: 1px solid black;
-        border-collapse: collapse;
-        text-align: center;
+        @font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-BoldItalic.eot');
+    src: local('Basier Circle Bold Italic'), local('BasierCircle-BoldItalic'),
+        url('BasierCircle-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-BoldItalic.woff2') format('woff2'),
+        url('BasierCircle-BoldItalic.woff') format('woff'),
+        url('BasierCircle-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-Bold.eot');
+    src: local('Basier Circle Bold'), local('BasierCircle-Bold'),
+        url('BasierCircle-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-Bold.woff2') format('woff2'),
+        url('BasierCircle-Bold.woff') format('woff'),
+        url('BasierCircle-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-MediumItalic.eot');
+    src: local('Basier Circle Medium Itali'), local('BasierCircle-MediumItalic'),
+        url('BasierCircle-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-MediumItalic.woff2') format('woff2'),
+        url('BasierCircle-MediumItalic.woff') format('woff'),
+        url('BasierCircle-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-Italic.eot');
+    src: local('Basier Circle Italic'), local('BasierCircle-Italic'),
+        url('BasierCircle-Italic.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-Italic.woff2') format('woff2'),
+        url('BasierCircle-Italic.woff') format('woff'),
+        url('BasierCircle-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-SemiBold.eot');
+    src: local('Basier Circle SemiBold'), local('BasierCircle-SemiBold'),
+        url('BasierCircle-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-SemiBold.woff2') format('woff2'),
+        url('BasierCircle-SemiBold.woff') format('woff'),
+        url('BasierCircle-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-Medium.eot');
+    src: local('Basier Circle Medium'), local('BasierCircle-Medium'),
+        url('BasierCircle-Medium.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-Medium.woff2') format('woff2'),
+        url('BasierCircle-Medium.woff') format('woff'),
+        url('BasierCircle-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-Regular.eot');
+    src: local('Basier Circle Regular'), local('BasierCircle-Regular'),
+        url('BasierCircle-Regular.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-Regular.woff2') format('woff2'),
+        url('BasierCircle-Regular.woff') format('woff'),
+        url('BasierCircle-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basier Circle';
+    src: url('BasierCircle-SemiBoldItalic.eot');
+    src: local('Basier Circle SemiBold Ita'), local('BasierCircle-SemiBoldItalic'),
+        url('BasierCircle-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BasierCircle-SemiBoldItalic.woff2') format('woff2'),
+        url('BasierCircle-SemiBoldItalic.woff') format('woff'),
+        url('BasierCircle-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;}
+        
+    
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
+        br{display: none}   
+
+       .col-3half{width: 50%;
+        text-align: right;
+        margin-top: 30px;
+        padding-right: 3%;
+    }
+
+        .smaller{font-size: 22px;
+            }
+        
+        .col-int{width: 100%;
+        
+        }
+
+        .centered {
+            position: absolute;
+            top: 39%;
+            width: 100%;
+            text-align: center;
+            }
+
+        @media only screen and (max-width: 983px){
+            .smaller{font-size:22px;
+            }
+            .col-3half{margin-top:20px
+            }
+            
+            .centered{top:36%;
+
+            }
+
+            br{display:block;}
+
+            img{width: 75%;}
+
+            li{font-size:16px;
+            }
+    }
+
+
+        @media only screen and (max-width: 670px){
+            img{width: 160px;}
+            li{font-size:14px}
+            .smaller{font-size: 18px;}
+            .col-3half{margin-top:0px}
+            .centered{top:33%}
+        }
+
+        @media only screen and (max-width: 480px){
+            img{width: 160px;}
+            li{font-size:10px}
+            .smaller{font-size: 14px;}
+            .col-3half{margin-top:0px;}
+            .centered{top:26%}
+        }
+        
+        
     </style>
-    <body style="background-color: EDE6DB;">
-        <table cellpadding="0px" style="border-spacing: 0px; border: 0px">
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;">Barcelona</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
+    
+    <body style="margin:0px">
+        <div class="container-fluid" style="margin:0px;padding-right:0px;padding-left:0px">
+            <div class="row" style="width: 100%;">
+                <div class="col-3half" style="text-align:left;padding:1%;padding-left:5.1%;margin-top:0px;margin-right: 0px;">
+                    <img style="max-width: 100%;" src="C:\Users\leoba\Downloads\Greater_Porto_LP\Frame.png">
+                </div>
+                <div class="col-3half" style="padding-left:0px;padding-top: 1%;padding-bottom:1%;">
+                    <p class="smaller" style="margin:0px;height: 22px;border-radius: 0px;font-family: basier Circle;
+                    font-weight: 600;line-height: 22px;letter-spacing: 0em;color: #00DFFF;display: inline;">
+                        #regionofthefuture<br>
+                    </p>
+                    <ul style="display:inline;margin:0px;font-family: Basier Circle;font-size: 16px;font-weight: bold;line-height: 16px; padding:0px;padding-left: 10px;">
+                        <li style="display:inline;padding:0px">
+                            Matosinho
+                        </li>
                         
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">14/08</td>
-                                    <td style="display: inline-block;width: 60px;">14:10</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Viagem\voo_barcelona.html">Avião</a></td>
-                        </td>
+                        <li style="display:inline;padding:0px">
+                            
+                            <span style="color:#00DFFF">&bull;</span> Porto
+                        </li>
                         
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">16/08</td>
-                            <td style="display: inline-block;width: 60px;">21:30</td>
-                            <td style="display: inline-block;width: 70px;"><a href="Transporte/barcelona_paris.png">Ônibus</a></td>
-                        </td>
+                        <li style="display: inline;padding:0px">
+                            <span style="color:#00DFFF">&bull;</span> Gaia
+                        </li>
 
-                    <td style="display: table-cell; border: 0px;">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/10183954?source_impression_id=p3_1655983963_%2F9igr7VwdSzHxb2D">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 14/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 16/08</td>
-                    </td>
-
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> X</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$384.43</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> R$384.43</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Paris</h2></td>
-                <table style="border-spacing:0px">
+                        <li style="margin-left:2%;display:inline;padding:0px">
+                            EN
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-int" style="text-align: center;padding-right: 0px;position: relative;">
+                    <img src="C:\Users\leoba\Downloads\cubo_gif.GIF" style="height: 49.73vw;width: 89.93vw;z-index:2;position: relative;">
+                    <img src="C:\Users\leoba\Downloads\blocos_direita.png" style="position:absolute;z-index: 3;left:91.5%;bottom: 53.3%;height: 28.1vw;width:7.8vw">
                     
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">17/08</td>
-                                    <td style="display: inline-block;width: 60px;">11:35</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/barcelona_paris.png">Ônibus</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">19/08</td>
-                                    <td style="display: inline-block;width: 60px;">23:30</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/Paris_Chamonix.png">Ônibus</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0px">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/40258672?source_impression_id=p3_1655984020_uvNQZNJZWojZ2WyU">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 17/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 19/08 </td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €50,23</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$324.27</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €50.23 + R$324.27</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Chamonix</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">20/08</td>
-                                    <td style="display: inline-block;width: 60px;">08:55</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/Paris_Chamonix.png">Ônibus</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">22/08</td>
-                            <td style="display: inline-block;width: 60px;">20:25</td>
-                            <td style="display: inline-block;width: 70px;"><a href="Transporte/chamonix_veneza.png">Ônibus</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0px">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/16345879?source_impression_id=p3_1655984053_vuwPe4sTZ5g4KHf1">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 20/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 22/08</td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €55.61</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$272.46</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €55.61 + R$272.46</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Veneza</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">23/08</td>
-                                    <td style="display: inline-block;width: 60px;">06:40</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/chamonix_veneza.png">Ônibus</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">25/08</td>
-                            <td style="display: inline-block;width: 60px;">07:10</td>
-                            <td style="display: inline-block;width: 70px;"><a href="Transporte/veneza_berlim.png">Avião</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0px">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/53376320?source_impression_id=p3_1655984084_rviuXAOuEqxT3JcB">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 23/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 25/08</td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €18,89</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$276.43</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €18.89 + R$276.43</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Berlim</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">25/08</td>
-                                    <td style="display: inline-block;width: 60px;">08:40</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/veneza_berlim.png">Avião</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">28/08</td>
-                            <td style="display: inline-block;width: 60px;">06:46</td>
-                            <td style="display: inline-block;width: 70px;"><a href="Transporte/berlim_amsterdam.png">Trem</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0px">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/42604990?source_impression_id=p3_1655984092_K9TTvRKLvCQMKymA">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 25/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 28/08 </td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €22,49</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$555.27</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €22.49 + R$555.27</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Amsterdam</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">28/08</td>
-                                    <td style="display: inline-block;width: 60px;">13:00</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/berlim_amsterdam.png">Trem</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">30/08</td>
-                            <td style="display: inline-block;width: 60px;">6:40</td>
-                            <td style="display: inline-block;width: 70px;"><a href="Transporte/amsterdam_lisboa.png">Avião</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0px">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/28797683?source_impression_id=p3_1655984100_XPzh%2BW%2BtEi936DwG">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 28/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 30/08 </td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €37,90</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> R$587.51</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €37.90 + R$587.61</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr><td style="border: 0px"><h2 style="margin: 0; color: 1D5C63;"><br>Lisboa</h2></td>
-                <table style="border-spacing:0px">
-                    
-                    <td style="display:table-cell; padding-right: 0px; border: 0px;">    
-                        <td><h4 style="color:066163;">LUGARES PARA VISITAR</h4></td>
-                        <td><a href="https://www.klm.com/destinations/br/br/article/the-fantasy-world-of-park-guell">Parque Güell</a></td>
-                        <td><a href="https://www.tripadvisor.pt/Attraction_Review-g187497-d190164-Reviews-Mercat_de_la_Boqueria-Barcelona_Catalonia.html">Mercat de Sant Josep de la Boqueria</a>(Mercado gigante)</td>
-                        <td><a href="http://www.museupicasso.bcn.cat/en/">Museu do Picasso</a> (não sei se é tão interessante)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d191048-Reviews-Barcelona_Cathedral-Barcelona_Catalonia.html">Catedral de Barcelona</a></td>
-                        <td><a href="https://youtu.be/0Piux9Z2p2o">Sagrada Familia</a> (Basilica)</td>
-                        <td><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190629-Reviews-Casa_Mila_La_Pedrera-Barcelona_Catalonia.html">Casa Mila</a></td>
-                    </td>
-
-                    <td style="display: table-cell; border: 0px;">
-                        
-                            <td><h4 style="color: 066163">DATAS/HORÁRIOS/PASSAGENS</h4></td>
-                                <td style="display: inline-block;width: 60px; height: 18px;"><h4 style="margin: 0px; display:inline;"></h4></td>
-                                <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Data</h4></td>
-                                <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Hora</h4></td>
-                                <td style="display: inline-block;width: 70px"><h4 style="margin: 0px; display:inline">Passagem</h4></td>
-                    </td>            
-                        <td style="display: block; border: 0px; padding: 0px;">
-                                    <td style="display: inline-block;width: 60px;"><h4 style="margin: 0px; display:inline">Chegada</h4></td>
-                                    <td style="display: inline-block;width: 60px;">30/08</td>
-                                    <td style="display: inline-block;width: 60px;">8:40</td>
-                                    <td style="display: inline-block;width: 70px;"><a href="Transporte/amsterdam_lisboa.png">Avião</a></td>
-                        </td>
-                        
-                        <td style="display: block; border: 0px;padding: 0px;">
-                            <td style="display: inline-block;width: 60px"><h4 style="margin: 0px; display:inline">Saída</h4></td>
-                            <td style="display: inline-block;width: 60px;">Indefinido</td>
-                            <td style="display: inline-block;width: 60px;">Indefinido</td>
-                            <td style="display: inline-block;width: 70px;"><a href="#">Indefinido</a></td>
-                        </td>
-
-                    <td style="display: table-cell; border: 0;">
-                        <td><h4 style="color: 0066163;display: inline-block;"><a href="https://www.airbnb.pt/rooms/32497975?adults=6&check_in=2022-08-30&check_out=2022-08-31&federated_search_id=bac937e5-1786-4f51-b03a-58271e4040eb&source_impression_id=p3_1651834621_3QavNfsdhKEXi6KC">AIRBNB</a></h4>🏠</td>
-                        <td><h4 style="margin:0px;display:inline">Checkin:</h4> 30/08 </td>
-                        <td><h4 style="margin:0px;display:inline">Checkout:</h4> 31/08 </td>
-                    </td>
-
-                    
-                    <td style="display:table-cell; border: 0px;">    
-                        <td><h4 style="color:066163;">GASTOS P/PESSOA</h4></td>
-                        <td><h4 style="margin: 0px; display:inline">Transporte:</h4> €60</td>
-                        <td><h4 style="margin: 0px; display:inline">Estadia:</h4> Indefinido</td>
-                        <td><h4 style="margin: 0px; display:inline">Total:</h4> €60</td>
-                    </td>
-
-                </table>
-            </tr>
-
-            <tr> 
-                <table>
-                    <br>
-                    <td  style="border: 5px solid red; width: 1010.970px;">
-                        <h2 style="display: inline;">Gastos totais Transportes:</h2><h3 style="display:inline; color: green;"> €245.12</h3>
-                    </td>
-                    
-                    <td  style="border: 5px solid red;margin-top:2rem; width: 1010.970px;">
-                        <h2 style="display: inline;">Gastos totais Airbnb:</h2><h3 style="display:inline; color: green;"> R$2400</h3>
-                    </td>
-                </table>
-            </tr>
-        </table>
+                    <img src="C:\Users\leoba\Downloads\blocos_esquerda.png" style="position: absolute; z-index:1;left:0.01%; bottom:0.001%;height: 21.18vw;width: 23vw;">
+                    <p class="centered" style="font-family: Basier Circle;z-index:5;
+                    font-size: 4.28vw;
+                    font-weight: 700;
+                    line-height: 78px;
+                    letter-spacing: 0em;
+                    color:white;
+                    ">
+                        Great things are coming
+                    </p>
+                    <p style="font-family: Basier Circle;font-size: 0.725vw;font-weight: 500;line-height: 12px;letter-spacing: 0em;text-align: right;padding-right: 5%;padding-top:5%">
+                        © 2022 Greater Porto. All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     </body>
 </html>
